@@ -23,3 +23,4 @@ Sign in at pagescms.org with GitHub and open the repo. `.pages.yml` sets it up t
 # basset-site
 # basset-site
 # basset-site
+# basset-site
