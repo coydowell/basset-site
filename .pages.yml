@@ -1,0 +1,63 @@
+media:
+  input: src/static/images
+  output: /images
+content:
+  - name: site
+    label: Site settings
+    type: file
+    path: data/site.json
+    fields:
+      - {name: contactName, label: Contact name, type: string}
+      - {name: location, label: Location, type: string}
+      - {name: email, label: Email, type: string}
+      - {name: phone, label: Phone, type: string}
+      - {name: priceLine, label: Price line, type: string}
+      - {name: reserveText, label: Reserve blurb, type: text}
+      - name: deposit
+        label: Deposit popup
+        type: object
+        fields:
+          - {name: base, label: Deposit amount, type: number}
+          - {name: fee, label: Online processing fee, type: number}
+          - {name: cardUrl, label: Card checkout link, type: string}
+          - {name: venmo, label: Venmo handle, type: string}
+          - {name: zelle, label: Zelle phone or email, type: string}
+          - {name: note, label: Note shown in popup, type: text}
+      - name: faq
+        label: FAQ
+        type: object
+        list: true
+        fields:
+          - {name: q, label: Question, type: string}
+          - {name: a, label: Answer, type: text}
+  - name: litters
+    label: Litters
+    type: file
+    path: data/litters.json
+    fields:
+      - name: litters
+        label: Litters
+        type: object
+        list: true
+        fields:
+          - {name: title, label: Title, type: string}
+          - {name: slug, label: URL slug, type: string}
+          - {name: year, label: Year, type: string}
+          - {name: status, label: Status, type: select, options: {values: [upcoming, available, past]}}
+          - {name: intro, label: Intro, type: text}
+          - {name: boys, label: Boys, type: string}
+          - {name: girls, label: Girls, type: string}
+          - {name: crewPhoto, label: Group photo path, type: string}
+          - {name: dam, label: Dam, type: object, fields: [{name: name, type: string}, {name: photo, type: string}, {name: bio, type: text}]}
+          - {name: sire, label: Sire, type: object, fields: [{name: name, type: string}, {name: photo, type: string}, {name: bio, type: text}]}
+          - name: puppies
+            label: Puppies
+            type: object
+            list: true
+            fields:
+              - {name: name, label: Collar or name, type: string}
+              - {name: sex, label: Sex, type: select, options: {values: [M, F]}}
+              - {name: price, label: Price, type: string}
+              - {name: status, label: Status line, type: string}
+              - {name: photo, label: Photo path, type: string}
+              - {name: traits, label: Traits, type: string, list: true}

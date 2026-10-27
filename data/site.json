@@ -1,0 +1,23 @@
+{
+  "contactName": "Sandie at The Basset Family",
+  "location": "Fort Worth, Texas 76118, United States",
+  "email": "sandie@thebassetfamily.com",
+  "phone": "817-944-4750",
+  "priceLine": "Puppies are $3000. The deposit is $500.",
+  "reserveText": "Our babies find homes quickly. Reach out to reserve your furever friend or to ask questions by filling out the form. You are welcome to call me directly for a quicker response.",
+  "deposit": {
+    "base": 500,
+    "fee": 15,
+    "cardUrl": "#",
+    "venmo": "@Sandie-Dowell",
+    "zelle": "817-944-4750",
+    "note": "Deposits are required to be on the waiting list or to hold a puppy. A $15 fee is added for processing online payments. No fee is added to Venmo (@Sandie-Dowell) or Zelle (817-944-4750)."
+  },
+  "turnstileSiteKey": "",
+  "signupEmbed": "",
+  "faq": [
+    {"q": "How much is required to be on the waiting list?", "a": "Add answer."},
+    {"q": "Will you deliver the puppy?", "a": "Add answer."},
+    {"q": "Do you have a health guarantee on the puppy?", "a": "Add answer."}
+  ]
+}

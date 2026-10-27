@@ -1,0 +1,10 @@
+{"litters": [{
+  "slug": "waylon-betty-2026", "title": "Waylon and Betty 2026", "year": "2026", "status": "past",
+  "intro": "Add intro.", "boys": "2", "girls": "5", "crewPhoto": "",
+  "dam": {"name": "Betty Spaghetti - Our Family Basset Momma", "photo": "", "bio": "Paste bio."},
+  "sire": {"name": "Waylon - The Entertainer", "photo": "", "bio": "Paste bio."},
+  "puppies": [
+    {"name": "Blue Collar", "sex": "M", "price": "$3000", "status": "Reserved - Coppell, TX", "photo": "", "traits": ["Tri-colored - brown markings will come in later", "Calm", "Can be alone"]},
+    {"name": "Rainbow Collar", "sex": "F", "price": "$3000", "status": "Reserved - Celina, TX", "photo": "", "traits": ["Tri-colored - brown markings will come in later", "Lovey", "Calm", "Smallest size but not in spirit"]}
+  ]
+}]}
