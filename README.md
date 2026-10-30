@@ -6,7 +6,14 @@ Static site: `node build.mjs` turns `data/*.json` and `src/pages/*.html` into `d
 
 1. Put photos in `src/static/images/` (home page expects logo.jpg, hero.jpg, welcome.jpg). Reference others in the JSON as `/images/name.jpg`.
 2. Push this folder to a GitHub repo.
-3. Cloudflare dashboard > Workers & Pages > Create > Pages > connect the repo. Build command `node build.mjs`, output directory `dist`.
+3. Cloudflare dashboard > Workers & Pages > Create > Pages > connect the repo. Set the build command to `node build.mjs` and the output directory to `dist`.
+   For a manual CLI deploy, build first and use Wrangler's **Pages** command (this is a Pages project, not a Worker):
+   ```sh
+   node build.mjs
+   npx wrangler login
+   npx wrangler pages deploy dist --project-name <your-pages-project> --branch <branch-name>
+   ```
+   Replace the placeholders with the Pages project name from Cloudflare and the branch to deploy. Deploying the production branch publishes to production; use another branch for a preview. `npx wrangler deploy` targets Workers and is not the command for this site.
 4. Inquiry form: create a Turnstile widget (put its site key in `data/site.json`), then set Pages environment variables `TURNSTILE_SECRET`, `RESEND_API_KEY`, `FROM_EMAIL`, `TO_EMAIL`. Resend (resend.com) needs your domain verified; check its current free limits.
 5. Domain: Pages project > Custom domains. Cloudflare will want DNS on Cloudflare. Copy every GoDaddy DNS record first, especially MX records if email runs through GoDaddy. Cloudflare Email Routing can forward sandie@ to your inbox for free if you drop GoDaddy email.
 6. Email-list signup: make a free form at MailerLite or Buttondown and paste its embed HTML into `signupEmbed` in `data/site.json`. Deposit popup: set `deposit.cardUrl` in `data/site.json` to a hosted card checkout link (a GoDaddy Pay Link or a Stripe Payment Link for the total including the fee). Venmo and Zelle details sit beside it. Don't add raw card-number fields to the page; use the processor's hosted checkout or hosted fields.
